@@ -30,10 +30,14 @@
             con l'aumentare del tempo di attesa<br> percio' con questa tecnica un thread di iniziale priorita' 1 (minima) con l'aumentare del tempo di attesa potra'<br> raggiungere priorita' piu' alta per finalmente essere eseguito e far defluire la coda.</p>
         <br>
         <h3>Un'esempio di Starvation:</h3>
-        <button onclick="avantiImmagine()">Prossimo evento</button>
-        <button onclick="indietroImmagine()">Evento precedente</button>
+        <button onclick="avantiImmagine()" class="plg">Prossimo evento</button>
+        <button onclick="indietroImmagine()" class="plg">Evento precedente</button>
         <br>
+        <p id="testoImg">1 thread in esecuzione di massima priorita' <br> con 4 thread in coda (per priorita')</p>
         <img id="immagine" src="starvation/tp1.png" alt="Immagine">
+
+
+
 
     </div>
 </body>

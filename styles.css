@@ -59,3 +59,47 @@ h2 {
     width: 35%;
     margin-left: 1%;
 }
+
+
+/* fine classi personalizzate*/
+
+
+/* pulsanti personalizzati*/
+
+.plg {
+    background-color: #008000;
+    border: none;
+    color: white;
+    /*padding: 12px 30px;*/
+    padding: 1%;
+    font-size: 1%;
+    cursor: pointer;
+    font-size: 150%;
+}
+
+.plb {
+    /*  */
+    background-color: DodgerBlue;
+    /* DodgerBlue */
+    border: none;
+    color: white;
+    /*padding: 12px 30px;*/
+    padding: 1.5%;
+    font-size: 1%;
+    cursor: pointer;
+    font-size: 150%;
+}
+
+
+/* Scurisce con mouse-over */
+
+.plg:hover {
+    background-color: #00AA00;
+}
+
+.plb:hover {
+    background-color: RoyalBlue;
+}
+
+
+/* fine pulsanti personalizzati*/
