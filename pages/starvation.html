@@ -1,6 +1,7 @@
 <head>
     <title>DeadLock - Starvation</title>
     <link href="../styles.css" rel="stylesheet" type="text/css">
+    <script src="starvation/scrpitstarvation.js"></script>
 </head>
 
 <body>
@@ -29,8 +30,11 @@
             con l'aumentare del tempo di attesa<br> percio' con questa tecnica un thread di iniziale priorita' 1 (minima) con l'aumentare del tempo di attesa potra'<br> raggiungere priorita' piu' alta per finalmente essere eseguito e far defluire la coda.</p>
         <br>
         <h3>Un'esempio di Starvation:</h3>
-        <p id="demo"></p>
-        <button type="button" onclick="document.getElementById('demo').innerHTML = 'f' "> Click me to display Date and Time.</button>
+        <button onclick="avantiImmagine()">Prossimo evento</button>
+        <button onclick="indietroImmagine()">Evento precedente</button>
+        <br>
+        <img id="immagine" src="starvation/tp1.png" alt="Immagine">
+
     </div>
 </body>
 
