@@ -23,8 +23,12 @@
             and Wait = processi in possesso di risorse possono richiederne di alte senza cedere quelle gia' acquisiti pu essendo bloccati in coda.<br> [] Non avere prevalenza = averla permetterebbe di gestire al meglio l'accesso alle risorse, con la possibilita'
             di creare Starvation ma eliminando il DeadLock.<br> [] Attesa circolare = piu' processi sono in attesa di risorse usate da un altro processo del gruppo (lo schema sottostante rappresenta questo evento).</p>
 
+
         <!-- esempio-->
-        <div class="destra">
+        <div style="float: left; margin-left: 15%;">
+            <img src="deadlock/DeadLock.png" alt="deadlock" height="40%">
+        </div>
+        <div style="float:left;">
             <h3>Esempio di DeadLock</h3>
             <p>Questo disegno rappresenta un possibile situazione di DeadLock, <br> i quadrati arancioni rappresentano la risorsa necessaria (R1 = risorsa 1, R2 = risorsa 2...);<br> I cerchi verdi i thread (T1 = thread 1, T2 = thread 2);<br> Le frecce verdi
                 rappresentano le risorse utilizzate,<br> le frecce rosse quelle che si necessitano ma a cui non ci si puo' accedere.</p>
@@ -33,21 +37,26 @@
             <p>Da questa situazione di completo stallo non e' possibile uscirci con il passare del tempo <br>poiche' si e' verificato un ciclo di richieste delle risorse;<br> l'unico modo e' intervenire manualmente oppure seguire delle linee guida <br> durante
                 la progettazione del sistema per far si che questi eventi si riducano o eliminino completamente.</p>
         </div>
-        <img src="deadlock/DeadLock.png" alt="deadlock" height="50%" style="margin-left: -30%; position: absolute; margin-top: -20%;">
-        <!-- fine esempio-->
+        <div style="clear:both;"></div>
 
-        <!-- esempio-->
-        <h3 style="margin-top: 7%;">Come gestirlo?</h3>
+        <!-- fine esempio -->
+
+        <h3>Come gestirlo?</h3>
         <p>Esistono 4 metodi principali per gestire questo problema:<br> [] Ignorandoli = per quanto sia possibile si cerca di ignorarli poiche' gestirli non e' sempre conveniente<br> [] Prevenendo = si attuano degli accorgimenti durante lo svillupo del
             sistema per avitare che almeno una delle codizioni necessarie non si verifichi <br> [] Rintracciamento e Recupero = analizzando il grafo delle risorse si puo' individuare il ciclo DeadLock, lo si interrompono i processi coinvolti e si ripristina
             il sistema per poi essere eseguiti nuovamente.<br> [] Eliminadolo = si elimina completamente la possibilita di generare cicli infiniti di richieste gestendo in maniera differente l'allocazione delle risorse.
         </p>
 
-        <div class="destra">
+        <!-- esempio-->
+        <div style="float: left; margin-left: 15%;">
+            <img src="deadlock/DeadLockRis.png" alt="deadlock" height="40%">
+        </div>
+
+        <div style="float:left;">
             <h3>Esempio di come risolvere il DeadLock</h3>
             <p>Sfruttando l'esempio precedente possiamo notare come "semplicemente" <br>anziche' far richiedere al thread 4 la risorsa 3 viene richiesta la risorsa 5,<br> al termine dell'esecuzione del thread 5 inizieranno a liberarsi le varie risorse gradualmente</p>
         </div>
-        <img src="deadlock/DeadLockRis.png" alt="deadlock" height="50%" style="margin-left: -30%; position: absolute; margin-top: -10%;">
+        <div style="clear:both;"></div>
         <!-- fine esempio-->
     </div>
 </body>
