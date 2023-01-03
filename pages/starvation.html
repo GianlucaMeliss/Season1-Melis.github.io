@@ -21,9 +21,12 @@
         <p> Per essere piu' semplice la comprensione di questo evento spesso lo si paragona con il pronto soccorso:<br> la coda al pronto soccorso e' gestita con la gravita' (priorita') del paziente ed il momento in cui arriva in coda,<br> i pazienti (thread)
             con gravita' (priorita') maggiore saranno curati (fornite le risorse) prima rispetto ad i pazienti <br> con gravita' minore (thread con minore priorita').<br> La Starvation si verifica quando continuano ad arrivare pazienti con gravita' maggiore
             e che quindi fanno rimanere <br> in coda per piu' tempo gli altri pazienti.<br> Da questa situazione e' possibile uscirci in modo autonomo quando non arrivano piu' pazienti <br>con gravita' maggiore e la coda potra' consumarsi secondo l'ordine
-            di arrivo. <br> I processi con priorita' inferiore ricevono le risorse richieste solo quando non ci saranno piu' processi con priorita' maggiore in coda;<br> l'uscita dalla coda di questi processi non e' sempre confermata e spesso e' destinata
-            ad un tempo indefinito.
+            di arrivo. <br> Quindi i processi con priorita' inferiore ricevono le risorse richieste solo quando non ci sono piu' processi con priorita' maggiore in arrivo e in coda;<br> l'uscita dalla coda di questi processi con bassa priorita' non e'
+            sempre confermata e spesso e' destinata ad un tempo indefinito.
         </p>
+        <h3>Come risolverla</h3>
+        <p>Con l'evoluzione della programmazione si sono evoluti anche gli algortimi di scheduluzaione,<br> esistono molti modi per eliminare o comunque ridurre di molto questo fenomeno<br> una delle tecniche piu' utilizzate prevede l'aumento di priorita'
+            con l'aumentare del tempo di attesa<br> percio' con questa tecnica un thread di iniziale priorita' 1 (minima) con l'aumentare del tempo di attesa potra'<br> raggiungere priorita' piu' alta per finalmente essere eseguito e far defluire la coda.</p>
     </div>
 </body>
 
